@@ -3,6 +3,6 @@
 file="$1"
 
 while read url; do
-    gau $url |  httpx -silent | grep '.js$'
+    gau $url | grep '.js$' | httpx -silent '
 done < "$file"
 #script.sh filename
